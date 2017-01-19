@@ -6,8 +6,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class NamesRepository {
-    
-    public static Observable<List<String>> provideListNames() {
-        return Observable.just(Arrays.asList("Max", "Bob", "Rex", "Luther", "Ted", "Red John"));
-    }
+
+	public static Observable<List<String>> provideListNames() {
+		return Observable.just(Arrays.asList("Max", "Bob", "Rex", "Luther", "Ted", "Red John"));
+	}
 }

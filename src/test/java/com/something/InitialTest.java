@@ -11,6 +11,6 @@ public class InitialTest {
 
 	@Test
 	public void sampleTest() {
-		assertEquals(7+7, 14);
+		assertEquals(7 + 7, 14);
 	}
 }
