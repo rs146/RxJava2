@@ -9,11 +9,11 @@ public class MultipleSources {
 
 	public static void main(String[] args) {
 		NamesRepository.provideListNames()
-				.flatMap(names -> PlacesRepository.provideListPlaces().map(placesList -> new Pair<>(names, placesList)))
+				.flatMap(names -> PlacesRepository.provideListPlaces()
+						.map(placesList -> new Pair<>(names, placesList)))
 				.subscribe(pair -> {
-					Pair<?, ?> aPair = (Pair<?, ?>) pair;
-					System.out.println(aPair.first);
-					System.out.println(aPair.second);
+					System.out.println(pair.first);
+					System.out.println(pair.second);
 				} , Throwable::printStackTrace);
 	}
 }

@@ -13,12 +13,8 @@ public class FlowableExample {
 
 		// remove the seed (50) argument, reduce returns a Maybe instead of a
 		// Single - both do not have onNext() terminal operations
-		flowable.reduce(new BiFunction<Integer, Integer, Integer>() {
-			@Override
-			public Integer apply(Integer t1, Integer t2) {
-				return t1 + t2;
-			}
-		}).subscribe(getMaybeObserver());
+		flowable.reduce((t1, t2) -> t1 + t2)
+				.subscribe(getMaybeObserver());
 	}
 
 	private static SingleObserver<Integer> getSingleObserver() {
