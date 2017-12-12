@@ -32,7 +32,7 @@ public class FlowableExample {
 
 			@Override
 			public void onError(Throwable e) {
-				System.out.println(e);
+				System.out.println(e.getMessage());
 			}
 		};
 	}
